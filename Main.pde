@@ -5,17 +5,20 @@ void setup() {
   size(200, 200);
   background(255);
   
-  //Creates dice throws depending on variable "diceThrow" 
-  // set to 3 so will make 3 dice throws
+  int sum = 0; 
+  
+  // Create dice throws depending on the variable "diceThrow"
   for (int i = 1; i <= diceThrow; i++) {
-    displayResult();
     int result = diceRoll();
-    pResult.add(result);
-    println(" ");
+    pResult.add(result); // Store the result in the ArrayList
+    displayResult(result); // Display the result
+    sum += result; // Add the result to the sum
   }
-  int sum = calculateSum();
+  
+  // Display the sum of dice rolls
   println("Sum of dice rolls: " + sum);
 }
 
 void draw() {
+//I didn't use draw, no need.
 }

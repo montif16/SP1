@@ -1,5 +1,4 @@
-String displayResult() {
-  int result = diceRoll();
+void displayResult(int result) {
   String jackpot = "You rolled the maximum, jackpot!";
   String lowestRoll = "You rolled the lowest, better luck next time";
   String average = "Nothing special, keep rolling";
@@ -13,8 +12,4 @@ String displayResult() {
   } else {
     println(average);
   }
-  
-  return result + ""
-  
-  ;
 }
